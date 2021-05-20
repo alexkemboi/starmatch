@@ -1,0 +1,87 @@
+.game {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.body {
+  display: flex;
+  background-color: rgb(3, 5, 143);
+}
+
+.help input{
+  color: rgb(1, 39, 4);
+  margin: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+  width:98%
+  
+
+}
+
+.left {
+  text-align: center;
+  width: 100%;
+  border: thin solid rgb(15, 15, 15);
+}
+
+.right {
+  text-align: center;
+  padding: 20px;
+  width: 120%;
+  border: thin solid rgb(2, 2, 2);
+}
+
+.star {
+	display: inline-block;
+  margin: 0 30px;
+  background-color:rgb(37, 4, 184));
+  color: rgb(230, 15, 15);
+}
+
+.star:after {
+  content: "\2605";
+  font-size: 170px;
+}
+
+.number {
+  border: thin solid rgb(37, 2, 236);
+  width: 180px;
+  height: 180px;
+  margin: 20px;
+  font-size: 100px;
+  color:rgb(4, 2, 117)
+}
+
+.number:focus, .number:active {
+  outline: none;
+  border: thin solid #ddd;
+}
+
+.timer {
+	color: rgb(233, 12, 12);
+  margin-top: 3px;
+  margin-left: 3px;
+  font-size: xx-large;
+  text-align: center;
+}
+.timer span{
+  color: blue;
+  font-size: 200%;
+  text-align: center;
+}
+.game-done .message {
+  font-size: 500%;
+  font-weight: bold;
+  text-decoration-color: cornsilk;
+  border-color: rgb(248, 247, 244);
+  margin: 15px;
+  text-align: middle;
+  color: #000;
+
+}
+.game-done button{
+  font-size: 300%;
+  background-color: rgb(241, 8, 8);
+  color: aqua;
+}
