@@ -1,10 +1,25 @@
-//import React from 'react';
 import ReactDOM from 'react-dom';
 import React, { useEffect, useState } from "react";
 import './index.css';
-
-
 // STAR MATCH - V8
+const DateTime = () => {
+
+  var [date,setDate] = useState(new Date());
+    useEffect(() => {
+      var timer = setInterval(()=>setDate(new Date()), 1000 )
+      return function cleanup() {
+          clearInterval(timer)
+      }
+    });
+  return(
+      <span >
+           Time : {date.toLocaleTimeString()+"    "}
+           Date : {date.toLocaleDateString()}
+      </span>
+  )
+}
+
+export default DateTime
 
 const StarsDisplay = props => (
   <>
@@ -30,9 +45,9 @@ const PlayAgain = props => (
     	className="message"
       style={{ color: props.gameStatus === 'lost' ? 'red' : 'green'}}
     >
-  	  {props.gameStatus === 'lost' ? 'Game Over' : 'Nice'}
+  	  {props.gameStatus === 'lost' ? 'You Lost!' : 'Won!'}
   	</div>
-	  <button  onClick={props.onClick}>Play Again</button>
+	  <button  onClick={props.onClick}></button>
 	</div>
 );
 
@@ -89,11 +104,11 @@ const Game = (props) => {
   };
 
   return (
-    <div className="game">
     
+    <div className="game">
+
       <div className="help">
-        
-        <input type="text" value="Pick 1 or more numbers that sum to the number of stars"/>
+        <label> " Pick 1 or more numbers that sum to the number of stars "</label> 
       </div>
       <div className="body">
         <div className="left">
@@ -114,8 +129,8 @@ const Game = (props) => {
           ))}
         </div>
       </div>
-      <div className="timer">TIME REMAINING <span>{secondsLeft}</span></div>
-     
+      <div className="timer"><label className="timeLabel">TIME REMAINING <span className="secondsLeft">{secondsLeft}</span></label>
+     <span><label className="dateLabel"><DateTime> </DateTime></label></span></div>
     </div>
   );
 };
@@ -128,9 +143,9 @@ const StarMatch = () => {
 // Color Theme
 const colors = {
   available: 'white',
-  used: 'green',
+  used: 'skyblue',
   wrong: 'red',
-  candidate: 'yellow',
+  candidate: 'grey',
 };
 
 // Math science

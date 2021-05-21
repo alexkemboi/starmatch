@@ -5,38 +5,44 @@
 
 .body {
   display: flex;
-  background-color: rgb(3, 5, 143);
+  
 }
 
-.help input{
-  color: rgb(1, 39, 4);
-  margin: 5px;
+.help{
+  padding: 0px;
+}
+
+.help label{
+  color: rgb(2, 2, 2);
+  margin-bottom: 10px; 
+  margin-top: 10px;
   text-align: center;
   font-weight: bold;
-  font-size: x-large;
-  width:98%
-  
+  font-size: 351.5%;
+  border:5px solid skyblue;
+  background-color:skyblue;
 
-}
+  }
 
 .left {
   text-align: center;
-  width: 100%;
-  border: thin solid rgb(15, 15, 15);
+  width: 120%;
+  border:5px solid skyblue;
+  padding-bottom: 50px;
+  background-image: url("741514.jpg");
 }
 
 .right {
   text-align: center;
   padding: 20px;
   width: 120%;
-  border: thin solid rgb(2, 2, 2);
+  border:5px solid skyblue;
 }
 
 .star {
 	display: inline-block;
   margin: 0 30px;
-  background-color:rgb(37, 4, 184));
-  color: rgb(230, 15, 15);
+  color:  white;
 }
 
 .star:after {
@@ -44,13 +50,17 @@
   font-size: 170px;
 }
 
+
+
+
 .number {
-  border: thin solid rgb(37, 2, 236);
+  border: solid rgb(37, 2, 236);
   width: 180px;
   height: 180px;
   margin: 20px;
   font-size: 100px;
-  color:rgb(4, 2, 117)
+  color:rgb(37,2, 236);
+  font-weight: 1000;
 }
 
 .number:focus, .number:active {
@@ -58,30 +68,55 @@
   border: thin solid #ddd;
 }
 
-.timer {
-	color: rgb(233, 12, 12);
-  margin-top: 3px;
-  margin-left: 3px;
-  font-size: xx-large;
-  text-align: center;
+.timer .timeLabel{
+	color:black;
+  margin-top: 50px;
+  margin-left: 0px;
+  font-size: 250%;
+  font-weight: 1000;
+  text-align: left;
+  border:solid black 1px;
+  height: 1000%;
+  padding: 3px;
+}
+.timer .timeLabel .secondsLeft{
+  color:red;
+  font-size: 120%;
+}
+.timer .dateLabel {
+  padding: 2px;
+  margin-top: 1px;
+  margin-left: 350px;
+  font-size: 250%;
+  font-weight: 1000;
+  text-align: left;
+  border:solid black 1px;
+    
 }
 .timer span{
-  color: blue;
-  font-size: 200%;
-  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 100%;
+  text-align: right;
+  font-weight: 1800;
+  
+  
 }
+.timer{
+  border: solid skyblue 5px;
+  padding: 5px;
+}
+
 .game-done .message {
-  font-size: 500%;
+  font-size: 1000%;
   font-weight: bold;
-  text-decoration-color: cornsilk;
-  border-color: rgb(248, 247, 244);
-  margin: 15px;
   text-align: middle;
-  color: #000;
+  
 
 }
 .game-done button{
   font-size: 300%;
-  background-color: rgb(241, 8, 8);
-  color: aqua;
+  background-image: url("jan-03.gif");
+  width: 300px;
+  height: 90px;
+    
 }
